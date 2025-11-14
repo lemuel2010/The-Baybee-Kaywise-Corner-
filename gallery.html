@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <h2 class="logo">The Baybee Kaywise Corner</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <button id="themeToggle">🌙</button>
+    </nav>
+    
+    <div class="container">
+        <h1>Gallery 📸</h1>
+        <div class="gallery-grid">
+            <img src="https://picsum.photos/300?random=1" class="gallery-img" />
+            <img src="https://picsum.photos/300?random=2" class="gallery-img" />
+            <img src="https://picsum.photos/300?random=3" class="gallery-img" />
+            <img src="https://picsum.photos/300?random=4" class="gallery-img" />
+            <img src="https://picsum.photos/300?random=5" class="gallery-img" />
+            <img src="https://picsum.photos/300?random=6" class="gallery-img" />
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imgModal" class="modal">
+        <span id="closeModal">&times;</span>
+        <img id="modalImg" class="modal-content" />
+    </div>
+
+    <footer>
+        <p>© 2025 MySite — All rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

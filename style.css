@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+/* Light + Dark Theme Variables */
+:root {
+    --bg: #111;
+    --text: #fff;
+}
+
+.light {
+    --bg: #fff;
+    --text: #111;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #555;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+}
+
+nav a.active {
+    border-bottom: 2px solid #00bfff;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#themeToggle {
+    background: none;
+    border: 1px solid var(--text);
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+button {
+    padding: 12px 25px;
+    background: #00bfff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+button:hover {
+    background: #008ccc;
+}
+/* Contact Page */
+.contact-box {
+    width: 90%;
+    max-width: 400px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.contact-box input,
+.contact-box textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    background: var(--bg);
+    color: var(--text);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #555;
+    color: var(--text);
+}
+
+/* Smooth Fade Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* GALLERY PAGE */
+.gallery-grid {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    animation: fadeIn 0.7s;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* IMAGE MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+#closeModal {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
